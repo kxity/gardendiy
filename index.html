@@ -16,13 +16,29 @@
 
 
 
-    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="static/css/bootstrap.min.css">
 
     <!-- Custom styles -->
 
-    <link href="styles.css" rel="stylesheet" type="text/css">
+    <link href="static/css/styles.css" rel="stylesheet" type="text/css">
 
-
+<!-- Facebook Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '3372235792904127');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="static/picture/07b2813e9b8a4b3e996fdd667ae16f51.gif"
+/></noscript>
+<!-- End Facebook Pixel Code -->
 
 
 
@@ -32,9 +48,9 @@
 
     <!--[if lt IE 9]>
 
-      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="static/js/html5shiv.min.js"></script>
 
-      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+      <script src="static/js/respond.min.js"></script>
 
     <![endif]-->
 
@@ -56,7 +72,7 @@
 
      				<div id="logo">
 
-     					<img src="./images/logo.png">
+     					<img src="static/picture/logo.png">
 
      				</div>
 
@@ -128,159 +144,29 @@
 
 
 
-<?php
 
 
 
-$afflink = file_get_contents("./files/afflink.txt");
-
-$affid = file_get_contents("./files/clickbankid.txt");
-
-$tid = file_get_contents("./files/tid.txt");
-
-$exitaff = file_get_contents("./files/exitaff.txt");
 
 
-
-//echo $exitaff;
-
-
-
-?>
-
-
-<?php if ($exitaff=="exitaff1") { ?>
-
-
-<?php if(empty($tid)) { ?>
-
-
-
-<?php if ($afflink=="aff1") { ?>
-
-<?php $src ="https://hop.clickbank.net/?affiliate=".$affid."&vendor=rebaterias&x=d"; ?>
-
- 
-
-
-<?php } elseif ($afflink=="aff2") { ?>
-
-<?php $src ="https://hop.clickbank.net/?affiliate=".$affid."&vendor=rebaterias&x=p"; ?> 
-
- 
-
-
-<?php } elseif ($afflink=="aff3") { ?>
-
-<?php $src ="https://hop.clickbank.net/?affiliate=".$affid."&vendor=rebaterias&x=e"; ?> 
 
 
 
  
 
-<?php } ?>
-
-
-
-<?php } else { ?>
-
-
-
-<?php if ($afflink=="aff1") { ?>
-
-<?php $src ="https://hop.clickbank.net/?affiliate=".$affid."&vendor=rebaterias&x=d&tid=".$tid.""; ?>
-
- 
-
-
-<?php } elseif ($afflink=="aff2") { ?>
-
-<?php $src ="https://hop.clickbank.net/?affiliate=".$affid."&vendor=rebaterias&x=p&tid=".$tid.""; ?> 
-
-
-
-<?php } elseif ($afflink=="aff3") { ?>
-
-<?php $src ="https://hop.clickbank.net/?affiliate=".$affid."&vendor=rebaterias&x=e&tid=".$tid.""; ?> 
-
  
 
 
 
-<?php } ?>
-
-<?php } ?>
 
 
 
-<?php } ?> <!--Exit Aff 1 -->
 
 
-<?php if ($exitaff=="exitaff2") { ?>
+ <!--Exit Aff 1 -->
 
 
-<?php if(empty($tid)) { ?>
-
-
-
-<?php if ($afflink=="aff1") { ?>
-
-<?php $src ="https://hop.clickbank.net/?affiliate=".$affid."&vendor=rebaterias&x=d2"; ?>
-
- 
-
-
-<?php } elseif ($afflink=="aff2") { ?>
-
-<?php $src ="https://hop.clickbank.net/?affiliate=".$affid."&vendor=rebaterias&x=p2"; ?> 
-
- 
-
-
-<?php } elseif ($afflink=="aff3") { ?>
-
-<?php $src ="https://hop.clickbank.net/?affiliate=".$affid."&vendor=rebaterias&x=e2"; ?> 
-
-
-
- 
-
-<?php } ?>
-
-
-
-<?php } else { ?>
-
-
-
-<?php if ($afflink=="aff1") { ?>
-
-<?php $src ="https://hop.clickbank.net/?affiliate=".$affid."&vendor=rebaterias&x=d2&tid=".$tid.""; ?>
-
- 
- 
-
-<?php } elseif ($afflink=="aff2") { ?>
-
-<?php $src ="https://hop.clickbank.net/?affiliate=".$affid."&vendor=rebaterias&x=p2&tid=".$tid.""; ?> 
-
-
-
-<?php } elseif ($afflink=="aff3") { ?>
-
-<?php $src ="https://hop.clickbank.net/?affiliate=".$affid."&vendor=rebaterias&x=e2&tid=".$tid.""; ?> 
-
- 
-
-
-
-<?php } ?>
-
-<?php } ?>
-
-
-
-<?php } ?> <!--Exit Aff 2 -->
+ <!--Exit Aff 2 -->
 
 
 
@@ -300,7 +186,7 @@ $exitaff = file_get_contents("./files/exitaff.txt");
 
                 <p class="text-center" style="font-size: 18px;">El Programa de Restauración de Baterías™ es la nueva forma de re-acondicionar sus <br />baterías y traerlas de vuelta a la vida.</p>
 
-                <p class="text-center"><a href="<?php echo $src; ?>"><img src="./images/Recondition-Battery-play.jpg" style="display: inline-block;" /></a></p>
+                <p class="text-center"><a href="https://hop.clickbank.net/?affiliate=kxity&vendor=rebaterias&x=p"><img src="static/picture/recondition-battery-play.jpg" style="display: inline-block;" /></a></p>
 
          	</div>
 
@@ -318,7 +204,7 @@ $exitaff = file_get_contents("./files/exitaff.txt");
 
                 <p>Sin embargo esto no tiene por que continuar de esta manera, ¡porque existe un método mejor!</p>
 
-                <p>Se llama <strong><a href="<?php echo $src; ?>"><em>Programa de Restauración de Baterías</em></a></strong> y ¡le enseña a las personas como restaurar baterías viejas y traerlas de vuelta a la vida!*</p>
+                <p>Se llama <strong><a href="https://hop.clickbank.net/?affiliate=kxity&vendor=rebaterias&x=p"><em>Programa de Restauración de Baterías</em></a></strong> y ¡le enseña a las personas como restaurar baterías viejas y traerlas de vuelta a la vida!*</p>
 
                 <p>Es un método rápido y sencillo... ¡y puede ser usado en muchos tipos de baterías!</p>
 
@@ -328,7 +214,7 @@ $exitaff = file_get_contents("./files/exitaff.txt");
 
                 <p class="text-center" style="margin-bottom: 5px;">Como lo ha visto en:</p>
 
-                <p><img src="./images/EZ-battery-as-seen-on.jpg" class="align-center" /></p>
+                <p><img src="static/picture/ez-battery-as-seen-on.jpg" class="align-center" /></p>
 
 
 
@@ -358,9 +244,9 @@ $exitaff = file_get_contents("./files/exitaff.txt");
 
                 <p>Y aquí está lo increíble...</p>
 
-                <p>¡Es <u>fácil</u> y <u>simple</u> de hacer con el <a href="<?php echo $src; ?>">Programa de Restauración de Baterías</a>!*</p>
+                <p>¡Es <u>fácil</u> y <u>simple</u> de hacer con el <a href="https://hop.clickbank.net/?affiliate=kxity&vendor=rebaterias&x=p">Programa de Restauración de Baterías</a>!*</p>
 
-                <p>Y si miras <a href="<?php echo $src; ?>">este video</a>, puedes conocer más sobre el Programas de Restauración de Baterías™ y sobre cómo usarlo ¡para traer de vuelta a la vida esas baterías viejas!</p>
+                <p>Y si miras <a href="https://hop.clickbank.net/?affiliate=kxity&vendor=rebaterias&x=p">este video</a>, puedes conocer más sobre el Programas de Restauración de Baterías™ y sobre cómo usarlo ¡para traer de vuelta a la vida esas baterías viejas!</p>
 
             </div>
 
@@ -370,9 +256,9 @@ $exitaff = file_get_contents("./files/exitaff.txt");
 
             <div class="container">
 
-                <p><a href="<?php echo $src; ?>"><img src="./images/Ver-el-video.png" class="align-center" /></a></p>
+                <p><a href="https://hop.clickbank.net/?affiliate=kxity&vendor=rebaterias&x=p"><img src="static/picture/ver-el-video.png" class="align-center" /></a></p>
 
-                <h4 class="text-center"><a href="<?php echo $src; ?>"><strong>>> Selecciona aquí para ver la presentación gratuita <<</strong></a></h4>
+                <h4 class="text-center"><a href="https://hop.clickbank.net/?affiliate=kxity&vendor=rebaterias&x=p"><strong>>> Selecciona aquí para ver la presentación gratuita <<</strong></a></h4>
 
             </div>
 
@@ -399,13 +285,13 @@ $exitaff = file_get_contents("./files/exitaff.txt");
 
                         <p>¡Puede restaurarlas y usarlas de nuevo!*</p>
 
-                        <p>¡El <a href="<?php echo $src; ?>">Programa de Restauración de Baterías</a> es simple y fácil de usar y además muy efectivo!*</p>
+                        <p>¡El <a href="https://hop.clickbank.net/?affiliate=kxity&vendor=rebaterias&x=p">Programa de Restauración de Baterías</a> es simple y fácil de usar y además muy efectivo!*</p>
 
                         <p>¡Y puede ser usado desde la comodidad de su casa para restaurar sus baterías viejas!</p>
 
                         <p>Y si usted no es un técnico o no conoce lo básico sobre baterías, de igual manera puede usar el programa...</p>
 
-                        <p>Por que el <a href="<?php echo $src; ?>">Programa de Restauración de Baterías™</a> esta elaborado para que cualquier persona lo pueda utilizar.</p>
+                        <p>Por que el <a href="https://hop.clickbank.net/?affiliate=kxity&vendor=rebaterias&x=p">Programa de Restauración de Baterías™</a> esta elaborado para que cualquier persona lo pueda utilizar.</p>
 
 
 
@@ -441,9 +327,9 @@ $exitaff = file_get_contents("./files/exitaff.txt");
 
 
 
-                    <h4 class="text-center" style="margin-bottom: 10px;"><a href="<?php echo $src; ?>">Conózca Más En Esta Presentación Gratuita</a></h4>
+                    <h4 class="text-center" style="margin-bottom: 10px;"><a href="https://hop.clickbank.net/?affiliate=kxity&vendor=rebaterias&x=p">Conózca Más En Esta Presentación Gratuita</a></h4>
 
-                    <div class="text-center"><a href="<?php echo $src; ?>" id="orangebtn"><span class="text">Seleccione Aquí Para Ver La Presentación</span><span class="shine"></span><span class="hover"></span><span class="active"></span></a></div>
+                    <div class="text-center"><a href="https://hop.clickbank.net/?affiliate=kxity&vendor=rebaterias&x=p" id="orangebtn"><span class="text">Seleccione Aquí Para Ver La Presentación</span><span class="shine"></span><span class="hover"></span><span class="active"></span></a></div>
 
 
 
@@ -479,7 +365,7 @@ $exitaff = file_get_contents("./files/exitaff.txt");
 
                         <p>Y ellos logran hacer esto con cualquier tipo de baterías también...baterías de coche, de teléfonos y computadoras portátiles, baterías de carritos de golf, baterías de montacargas y ¡muchos otros tipos de baterías!</p>
 
-                        <p>¡Y en <a href="<?php echo $src; ?>">esta nueva presentación</a>, le revelamos como puede usar el Programa de Restauración de Baterías™ para lograr esto!</p>
+                        <p>¡Y en <a href="https://hop.clickbank.net/?affiliate=kxity&vendor=rebaterias&x=p">esta nueva presentación</a>, le revelamos como puede usar el Programa de Restauración de Baterías™ para lograr esto!</p>
 
                         <p><strong><u>Seleccione en la enlace abajo</u></strong> para ver el video gratuito y conocer más...</p>
 
@@ -487,7 +373,7 @@ $exitaff = file_get_contents("./files/exitaff.txt");
 
    
 
-                        <p><img src="./images/arrow-red.png" class="align-center" /></p>
+                        <p><img src="static/picture/arrow-red.png" class="align-center" /></p>
 
 
 
@@ -521,7 +407,7 @@ $exitaff = file_get_contents("./files/exitaff.txt");
 
             <div class="container">
 
-                <p><a href="<?php echo $src; ?>"><img src="./images/SELECCIONE-AQUI.png" class="align-center" /></a></p>
+                <p><a href="https://hop.clickbank.net/?affiliate=kxity&vendor=rebaterias&x=p"><img src="static/picture/seleccione-aqui.png" class="align-center" /></a></p>
 
             </div>
 
@@ -545,7 +431,7 @@ $exitaff = file_get_contents("./files/exitaff.txt");
 
 	     		 
 
-	     			<p><img src="./images/RDB-logo.png" class="align-center" /></p>
+	     			<p><img src="static/picture/rdb-logo.png" class="align-center" /></p>
 
 
 
@@ -629,17 +515,17 @@ $exitaff = file_get_contents("./files/exitaff.txt");
 
     <!-- Placed at the end of the document so the pages load faster -->
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="static/js/jquery.min.js"></script>
 
 
 
-    <script src="js/bootstrap.min.js"></script>
+    <script src="static/js/bootstrap.min.js"></script>
 
 
 
   	<!-- FontAwesome -->
 
-  	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+  	<link rel="stylesheet" href="static/css/font-awesome.min.css">
 
 
 
